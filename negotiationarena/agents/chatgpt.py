@@ -82,7 +82,7 @@ class ChatGPTAgent(Agent):
                 seed=self.seed
             )
 
-        return chat.message.content
+        return chat.choices[0].message.content
 
     def update_conversation_tracking(self, role, message):
         self.conversation.append({"role": role, "content": message})
