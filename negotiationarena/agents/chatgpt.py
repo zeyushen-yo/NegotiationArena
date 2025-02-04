@@ -71,6 +71,7 @@ class ChatGPTAgent(Agent):
                 model=self.model,
                 messages=self.conversation,
                 seed=self.seed,
+                max_completion_tokens=self.max_tokens
             )   
         else:
             chat = self.client.chat.completions.create(
@@ -78,7 +79,7 @@ class ChatGPTAgent(Agent):
                 messages=self.conversation,
                 temperature=self.temperature,
                 max_tokens=self.max_tokens,
-                seed=self.seed,
+                seed=self.seed
             )
 
         return chat.message.content
