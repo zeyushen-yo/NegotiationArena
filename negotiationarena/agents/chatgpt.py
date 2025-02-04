@@ -66,15 +66,22 @@ class ChatGPTAgent(Agent):
         return result
 
     def chat(self):
-        chat = self.client.chat.completions.create(
-            model=self.model,
-            messages=self.conversation,
-            temperature=self.temperature,
-            max_tokens=self.max_tokens,
-            seed=self.seed,
-        )
+        if self.model == "o3-mini" or self.model == "o1-mini" or self.model == "o1":
+            chat = self.client.chat.completions.create(
+                model=self.model,
+                messages=self.conversation,
+                seed=self.seed,
+            )   
+        else:
+            chat = self.client.chat.completions.create(
+                model=self.model,
+                messages=self.conversation,
+                temperature=self.temperature,
+                max_tokens=self.max_tokens,
+                seed=self.seed,
+            )
 
-        return chat.choices[0].message.content
+        return chat.message.content
 
     def update_conversation_tracking(self, role, message):
         self.conversation.append({"role": role, "content": message})
