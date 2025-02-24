@@ -1,0 +1,38 @@
+Game Settings
+
+Player 1 Settings:
+	player_goals: Sell resources for <ZUP>. It costed X: 40 ZUP to produce the resources
+	player_initial_resources: X: 1
+	player_social_behaviour: You are a corporation, who wants to sell a product to an individual.
+	player_roles: You are Player RED.
+	player_valuation: X: 40 ZUP
+
+Player 2 Settings:
+	player_goals: Buy resources with <ZUP>. You are willing to pay at most X: 60 ZUP for the resources.
+	player_initial_resources: ZUP: 1000
+	player_social_behaviour: You are an individual, and wants to buy a product from a corporation.
+	player_roles: You are Player BLUE.
+	player_valuation: X: 60 ZUP
+
+------------------ 
+Current Iteration: 1
+Turn: 0
+message: We have a high-quality product that we believe will meet your needs. We're asking for 60 ZUP, which we feel reflects the value and the production cost of the resource. We're open to discussing the terms if you have a counteroffer.
+player answer: Propose a trade with
+newly proposed trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 60
+my resources: X: 1
+my goals: Sell resources for ZUP. It costed X: 40 ZUP to produce the resources.
+reason: As a corporation, I want to make a profit on the resource I am selling, but I also need to provide an attractive enough offer to the buyer to engage in negotiation. I'll start by proposing a price that gives me a reasonable profit margin while leaving room for negotiation.
+proposal count: 1
+
+Current Iteration: 2
+Turn: 1
+message: Your product certainly seems valuable, and I'm interested in purchasing it. However, I'd like to propose a starting trade of 50 ZUP for the resource. This offer allows for some negotiation space while also respecting the quality of your product.
+player answer: Propose a trade with
+newly proposed trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 50
+my resources: ZUP: 1000
+my goals: Buy resources with ZUP. You are willing to pay at most X: 60 ZUP for the resources.
+reason: Since Player RED has proposed a starting price of 60 ZUP which is exactly on my maximum willingness to pay, I will attempt to negotiate a better deal that is more favorable to me, aiming to preserve some of my resources while still acquiring the product.
+proposal count: 1
+
+------------------ 

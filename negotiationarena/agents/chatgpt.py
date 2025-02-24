@@ -24,12 +24,10 @@ class ChatGPTAgent(Agent):
         self.run_epoch_time_ms = str(round(time.time() * 1000))
         self.model = model
         self.conversation = []
-        self.prompt_entity_initializer = "system"
-        self.seed = (
-            int(self.run_epoch_time_ms) + random.randint(0, 2**16)
-            if seed is None
-            else seed
-        )
+        if self.model in ["o1-mini", "o1", "o3-mini"]:
+            self.prompt_entity_initializer = "user"
+        else:
+            self.prompt_entity_initializer = "system"
         self.client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
         self.temperature = temperature
         self.max_tokens = max_tokens
@@ -66,23 +64,26 @@ class ChatGPTAgent(Agent):
         return result
 
     def chat(self):
-        if self.model == "o3-mini" or self.model == "o1-mini" or self.model == "o1":
-            chat = self.client.chat.completions.create(
-                model=self.model,
-                messages=self.conversation,
-                seed=self.seed,
-                max_completion_tokens=self.max_tokens
-            )   
-        else:
-            chat = self.client.chat.completions.create(
-                model=self.model,
-                messages=self.conversation,
-                temperature=self.temperature,
-                max_tokens=self.max_tokens,
-                seed=self.seed
-            )
-
-        return chat.choices[0].message.content
+        while True:
+            if self.model == "o3-mini" or self.model == "o1-mini" or self.model == "o1":
+                chat = self.client.chat.completions.create(
+                    model=self.model,
+                    messages=self.conversation,
+                    max_completion_tokens=self.max_tokens
+                )   
+            else:
+                chat = self.client.chat.completions.create(
+                    model=self.model,
+                    messages=self.conversation,
+                    temperature=self.temperature,
+                    max_tokens=self.max_tokens
+                )
+            response_content = chat.choices[0].message.content
+            if response_content.strip():
+                print(len(response_content))
+                print("GPT's response starts: ", response_content)
+                print("GPT's response ends.")
+                return response_content
 
     def update_conversation_tracking(self, role, message):
         self.conversation.append({"role": role, "content": message})

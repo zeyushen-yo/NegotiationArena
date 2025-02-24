@@ -16,6 +16,9 @@ from games.buy_sell_game.prompt import buy_sell_prompt
 from negotiationarena.parser import ExchangeGameDefaultParser
 from negotiationarena.agent_message import AgentMessage
 
+import logging
+import json
+
 
 class BuySellGameDefaultParser(ExchangeGameDefaultParser):
     def __init__(self):
@@ -229,5 +232,4 @@ class BuySellGame(AlternatingGameEndsOnTag):
                     player_outcome=outcome,
                 ),
             )
-
             self.game_state.append(datum)

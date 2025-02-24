@@ -1,0 +1,67 @@
+Game Settings
+
+Player 1 Settings:
+	player_goals: Sell resources for <ZUP>. It costed X: 40 ZUP to produce the resources
+	player_initial_resources: X: 1
+	player_social_behaviour: You are a corporation, who wants to sell a product to an individual.
+	player_roles: You are Player RED.
+	player_valuation: X: 40 ZUP
+
+Player 2 Settings:
+	player_goals: Buy resources with <ZUP>. You are willing to pay at most X: 60 ZUP for the resources.
+	player_initial_resources: ZUP: 1000
+	player_social_behaviour: You are an individual, and wants to buy a product from a corporation.
+	player_roles: You are Player BLUE.
+	player_valuation: X: 60 ZUP
+
+------------------ 
+Current Iteration: 1
+Turn: 0
+message: As the leading corporation in our industry, we offer you our premium product X, which has been crafted with the highest standards to meet your needs. We propose an initial offer at a competitive price, taking into account the quality and value it brings to you.
+player answer: Propose a trade with
+newly proposed trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 50
+my resources: X: 1
+my goals: Sell resources for ZUP. It costed X: 40 ZUP to produce the resources.
+reason: I am proposing a starting trade with a higher price than my production cost to leave room for negotiation and to ensure I make a profit.
+proposal count: 1
+
+Current Iteration: 2
+Turn: 1
+message: I appreciate the quality of your product and understand its value. However, I’d like to propose a slightly more modest initial offer with the understanding that there's room for negotiation. Let's find a fair trade that benefits us both.
+player answer: PROPOSAL
+newly proposed trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 40
+my resources: ZUP: 1000
+my goals: Buy resources with ZUP. You are willing to pay at most X: 60 ZUP for the resources.
+reason: I’m proposing a trade that is below my maximum willingness to pay in order to start negotiations with room to adjust the offer while aiming for a favorable deal.
+proposal count: 1
+
+Current Iteration: 3
+Turn: 0
+message: We appreciate your understanding of the quality of our product and the effort to find a mutually beneficial agreement. To meet you halfway, we have revised our offer. We believe this new proposal reflects both the value of our product and our willingness to work with you.
+player answer: Propose a trade with
+newly proposed trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 45
+my resources: X: 1
+my goals: Sell resources for ZUP. It costed X: 40 ZUP to produce the resources.
+reason: The offer made by Player BLUE matches my production cost, so accepting it would mean I don't make a profit. I will counter with a price above the production cost but lower than my initial proposal to move towards a compromise.
+proposal count: 2
+
+Current Iteration: 4
+Turn: 1
+message: Thank you for the revised offer. I believe it represents a fair balance between price and quality. Let's proceed with this deal at 45 ZUP for your premium product X.
+player answer: ACCEPT
+newly proposed trade: NONE
+my resources: ZUP: 1000
+my goals: Buy resources with ZUP. You are willing to pay at most X: 60 ZUP for the resources.
+reason: The counterproposal is closer to my maximum willingness to pay but still under the threshold. This trade is within my goals, and accepting a slightly higher price can help in establishing a good relationship with the corporation for future dealings. Therefore, I am inclined to accept this offer.
+proposal count: 2
+
+------------------ 
+Current Iteration: END
+Turn: None
+player_goals: [Sell resources for <ZUP>. It costed X: 40 ZUP to produce the resources, Buy resources with <ZUP>. You are willing to pay at most X: 60 ZUP for the resources.]
+player_initial_resources: [Resources(resource_dict={'X': 1}), Resources(resource_dict={'ZUP': 1000})]
+proposed_trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 45
+player_valuation: [{'X': 40}, {'X': 60}]
+final_response: ACCEPT
+final_resources: [Resources(resource_dict={'X': 0, 'ZUP': 45}), Resources(resource_dict={'ZUP': 955, 'X': 1})]
+player_outcome: [5, 15]

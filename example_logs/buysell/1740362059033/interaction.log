@@ -1,0 +1,38 @@
+Game Settings
+
+Player 1 Settings:
+	player_goals: Sell resources for <ZUP>. It costed X: 40 ZUP to produce the resources
+	player_initial_resources: X: 1
+	player_social_behaviour: You are a corporation, who wants to sell a product to an individual.
+	player_roles: You are Player RED.
+	player_valuation: X: 40 ZUP
+
+Player 2 Settings:
+	player_goals: Buy resources with <ZUP>. You are willing to pay at most X: 60 ZUP for the resources.
+	player_initial_resources: ZUP: 1000
+	player_social_behaviour: You are an individual, and wants to buy a product from a corporation.
+	player_roles: You are Player BLUE.
+	player_valuation: X: 60 ZUP
+
+------------------ 
+Current Iteration: 1
+Turn: 0
+message: Hello Player BLUE, I have an object produced at a cost of 40 ZUP that I'd like to sell. Feel free to make an offer for it.
+player answer: 
+newly proposed trade: NONE
+my resources: X: 1
+my goals: Sell resources for ZUP. It costed X: 40 ZUP to produce the resources
+reason: Since I have reached my proposal limit, I cannot propose a new trade. I must now decide to either accept or reject any trade proposed by Player BLUE. My goal is to sell my resource for ZUP to at least cover the production cost of 40 ZUP.
+proposal count: 0
+
+Current Iteration: 2
+Turn: 1
+message: Thank you for your offer, Player RED. I am willing to accept the cost of 40 ZUP for the object. Let's finalize the trade.
+player answer: ACCEPT
+newly proposed trade: NONE
+my resources: ZUP: 1000
+my goals: Buy resources with ZUP. You are willing to pay at most X: 60 ZUP for the resources.
+reason: Since I am Player BLUE and I have a resource limit of 1000 ZUP, and my goal is to pay at most 60 ZUP for the resources, I can't propose a new trade because the proposal count is at its limit of 0. I can only choose to accept or reject.
+proposal count: 0/0
+
+------------------ 

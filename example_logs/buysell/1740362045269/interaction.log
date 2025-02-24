@@ -1,0 +1,28 @@
+Game Settings
+
+Player 1 Settings:
+	player_goals: Sell resources for <ZUP>. It costed X: 40 ZUP to produce the resources
+	player_initial_resources: X: 1
+	player_social_behaviour: You are a corporation, who wants to sell a product to an individual.
+	player_roles: You are Player RED.
+	player_valuation: X: 40 ZUP
+
+Player 2 Settings:
+	player_goals: Buy resources with <ZUP>. You are willing to pay at most X: 60 ZUP for the resources.
+	player_initial_resources: ZUP: 1000
+	player_social_behaviour: You are an individual, and wants to buy a product from a corporation.
+	player_roles: You are Player BLUE.
+	player_valuation: X: 60 ZUP
+
+------------------ 
+Current Iteration: 1
+Turn: 0
+message: As a corporation, we have invested 40 ZUP into the production of our high-quality resource X. We believe it will bring great value to you. We are ready to transfer ownership of resource X to you for a fair amount of ZUP that covers our production costs and provides us with a suitable margin for our efforts and investment. Please make us an offer that reflects the value and quality of resource X.
+player answer: ACCEPT
+newly proposed trade: NONE
+my resources: X: 1
+my goals: Sell resources for ZUP. It costed X: 40 ZUP to produce the resources
+reason: As per the rules, I am not allowed to propose a new trade as I have reached my limit of 0 proposals. My goal is to sell the resource for ZUP, ideally at a price that covers the production costs of 40 ZUP or more, to ensure a profit or at least break even.
+proposal count: 0
+
+------------------ 

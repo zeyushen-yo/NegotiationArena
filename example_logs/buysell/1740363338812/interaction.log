@@ -1,0 +1,83 @@
+Game Settings
+
+Player 1 Settings:
+	player_goals: Sell resources for <ZUP>. It costed X: 40 ZUP to produce the resources
+	player_initial_resources: X: 1
+	player_social_behaviour: You are a corporation, who wants to sell a product to an individual.
+	player_roles: You are Player RED.
+	player_valuation: X: 40 ZUP
+
+Player 2 Settings:
+	player_goals: Buy resources with <ZUP>. You are willing to pay at most X: 60 ZUP for the resources.
+	player_initial_resources: ZUP: 1000
+	player_social_behaviour: You are an individual, and wants to buy a product from a corporation.
+	player_roles: You are Player BLUE.
+	player_valuation: X: 60 ZUP
+
+------------------ 
+Current Iteration: 1
+Turn: 0
+message: Dear Player BLUE, we have a high-quality product X that we believe will meet your needs. We've invested 40 ZUP in its production to ensure its quality. We propose to sell it to you for 50 ZUP, which we feel is a fair price considering the investment we've made in its production. We look forward to your counteroffer or acceptance.
+player answer: PROPOSAL
+newly proposed trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 50
+my resources: X: 1
+my goals: Sell resources for ZUP. It costed X: 40 ZUP to produce the resources
+reason: As a corporation, my goal is to sell my product at a profit. Since it cost 40 ZUP to produce, I would like to propose a starting price that gives me a reasonable profit margin while also leaving room for negotiation.
+proposal count: 1
+
+Current Iteration: 2
+Turn: 1
+message: Thank you for your offer. I understand the investment you've made in the production of product X, and I'm interested in purchasing it. However, I would like to propose a counteroffer of 45 ZUP for the product. I believe this offer is still fair and takes into consideration the quality of the product and the investment you've made. I look forward to your response.
+player answer: PROPOSAL
+newly proposed trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 45
+my resources: ZUP: 1000
+my goals: Buy resources with <ZUP>. You are willing to pay at most X: 60 ZUP for the resources.
+reason: 
+I want to initiate the negotiation with a lower offer than the maximum I'm willing to pay, which is 60 ZUP, to leave room for negotiation and potentially get a better deal. Starting at 45 ZUP might be a good counteroffer, as it is close to the seller's cost but still below their asking price.
+
+proposal count: 1
+
+Current Iteration: 3
+Turn: 0
+message: Thank you for your counteroffer of 45 ZUP. We appreciate your recognition of the quality and value of our product. To meet halfway and foster a good business relationship, we would like to propose a minor adjustment. We suggest a price of 48 ZUP for product X. This price ensures that we cover our costs and maintain a modest profit margin, while still providing you with a valuable product at a competitive price. We hope this revised offer is agreeable to you.
+player answer: PROPOSAL
+newly proposed trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 48
+my resources: X: 1
+my goals: Sell resources for ZUP. It costed X: 40 ZUP to produce the resources
+reason: Player BLUE has made a counteroffer of 45 ZUP, which is slightly above the production cost. It's a reasonable offer, but as a corporation, I aim for a bit higher profit margin. However, I want to close the deal while maintaining good relations for potential future business, so I will propose a slight increase that is a compromise between the initial asking price and the counteroffer.
+proposal count: 2
+
+Current Iteration: 4
+Turn: 1
+message: 
+I appreciate your willingness to negotiate and understand the need to cover your costs while maintaining a profit. I'd like to continue our good-faith negotiations and propose a new price of 46 ZUP for product X. This offer is a bit closer to your revised price and I hope it demonstrates my commitment to reaching a fair and mutually beneficial agreement. Looking forward to your thoughts on this.
+
+player answer: PROPOSAL
+newly proposed trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 46
+my resources: ZUP: 1000
+my goals: Buy resources with ZUP. You are willing to pay at most X: 60 ZUP for the resources.
+reason: 
+The seller has come down to 48 ZUP, which is within the range I am willing to pay. However, there's still an opportunity to negotiate for a slightly better price. I want to propose a price slightly higher than my initial offer, but still lower than their new offer, to see if we can settle somewhere in the middle. Proposing 46 ZUP could be a reasonable step towards reaching an agreement.
+
+proposal count: 2
+
+Current Iteration: 5
+Turn: 0
+message: We are pleased with your proposal of 46 ZUP for product X. It's important for us to establish and maintain positive business relationships with our clients, and your offer reflects a mutual understanding and respect for a fair transaction. We accept this offer and look forward to future business with you.
+player answer: ACCEPT
+newly proposed trade: NONE
+my resources: X: 1
+my goals: Sell resources for ZUP. It costed X: 40 ZUP to produce the resources
+reason: Player BLUE's new proposal of 46 ZUP is closer to my last offer, indicating a willingness to reach a deal. It's slightly above my production cost, offering a small profit. Given the negotiation process and the desire to maintain a good business relationship, I am inclined to accept this offer, ensuring a profit while also securing a potentially repeat customer.
+proposal count: 3
+
+------------------ 
+Current Iteration: END
+Turn: None
+player_goals: [Sell resources for <ZUP>. It costed X: 40 ZUP to produce the resources, Buy resources with <ZUP>. You are willing to pay at most X: 60 ZUP for the resources.]
+player_initial_resources: [Resources(resource_dict={'X': 1}), Resources(resource_dict={'ZUP': 1000})]
+proposed_trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 46
+player_valuation: [{'X': 40}, {'X': 60}]
+final_response: ACCEPT
+final_resources: [Resources(resource_dict={'X': 0, 'ZUP': 46}), Resources(resource_dict={'ZUP': 954, 'X': 1})]
+player_outcome: [6, 14]

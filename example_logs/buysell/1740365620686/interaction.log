@@ -1,0 +1,68 @@
+Game Settings
+
+Player 1 Settings:
+	player_goals: Sell resources for <ZUP>. It costed X: 40 ZUP to produce the resources
+	player_initial_resources: X: 1
+	player_social_behaviour: You are an individual, and wants to sell a product to a corporation.
+	player_roles: You are Player RED.
+	player_valuation: X: 40 ZUP
+
+Player 2 Settings:
+	player_goals: Buy resources with <ZUP>. You are willing to pay at most X: 60 ZUP for the resources.
+	player_initial_resources: ZUP: 1000
+	player_social_behaviour: You are a corporation, and wants to buy a product from an individual.
+	player_roles: You are Player BLUE.
+	player_valuation: X: 60 ZUP
+
+------------------ 
+Current Iteration: 1
+Turn: 0
+message: Hello Player BLUE, I have an object X that costed me 40 ZUP to produce. I am looking to sell it for a fair price that covers my costs and offers me a reasonable profit. Let's start the negotiation at 50 ZUP.
+player answer: Propose a trade with
+newly proposed trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 50
+my resources: X: 1
+my goals: Sell resources for ZUP. It costed X: 40 ZUP to produce the resources
+reason: I am proposing a starting trade that aims to cover my production costs and also leave room for negotiation.
+proposal count: 1
+
+Current Iteration: 2
+Turn: 1
+message: We appreciate your offer and understand the need for a fair price that covers your costs and provides a profit. However, as a corporation, we also look to negotiate deals that are favorable to our financial strategy. We propose 45 ZUP for the object X, which should still give you a reasonable profit margin while fitting within our acquisition budget.
+player answer: Propose a trade with
+newly proposed trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 45
+my resources: ZUP: 1000
+my goals: Buy resources with ZUP. You are willing to pay at most X: 60 ZUP for the resources.
+reason: Player RED has offered a starting price of 50 ZUP. As a corporation, we may have more negotiating power and can afford to make a counteroffer that is lower, but still within a range that might be acceptable to Player RED. We aim to acquire the object for a price that is as low as possible without offending the seller, keeping in mind our maximum willingness to pay is 60 ZUP.
+proposal count: 1
+
+Current Iteration: 3
+Turn: 0
+message: Thank you for your proposal of 45 ZUP. I understand the need to align with your financial strategy. To meet halfway, I propose 47 ZUP for object X, which should still be within your budget while allowing me a modest profit above production costs. I hope this offer is acceptable to you.
+player answer: Propose a trade with
+newly proposed trade: Player RED Gives X: 1 | Player BLUE Gives ZUP: 47
+my resources: X: 1
+my goals: Sell resources for ZUP. It costed X: 40 ZUP to produce the resources
+reason: I appreciate Player BLUE's counteroffer. It is close to my production costs, but I would like to propose a slightly higher amount to ensure a more significant profit margin. This should also leave room for further negotiation if necessary.
+proposal count: 2
+
+Current Iteration: 4
+Turn: 1
+message: We believe your counteroffer of 47 ZUP is fair and reflects a mutual understanding of value. It's within our budget and gives you the profit you deserve. We're happy to accept this offer and proceed with the purchase of object X for 47 ZUP.
+player answer: Accept
+newly proposed trade: NONE
+my resources: ZUP: 1000
+my goals: Buy resources with ZUP. You are willing to pay at most X: 60 ZUP for the resources.
+reason: Player RED has made a counteroffer of 47 ZUP, which is within our maximum willingness to pay. It is a reasonable increase from our initial counteroffer and shows a willingness to negotiate. Accepting this offer would secure the object X for the corporation at a price below our stated maximum, thus ensuring a good deal and maintaining a positive relationship with the seller for potential future transactions.
+proposal count: 2
+
+Current Iteration: 5
+Turn: 0
+message: I am pleased to hear that we have reached an agreement. Thank you for accepting my counteroffer of 47 ZUP for object X. I look forward to finalizing our transaction.
+player answer: ACCEPT
+newly proposed trade: NONE
+my resources: X: 1
+my goals: Sell resources for ZUP. It costed X: 40 ZUP to produce the resources
+reason: Player BLUE has accepted my counteroffer of 47 ZUP for object X, which meets my goal of selling above production cost and allows for a reasonable profit. I am satisfied with this outcome and will finalize the trade.
+proposal count: 2
+
+------------------ 

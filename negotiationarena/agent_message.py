@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 from negotiationarena.utils import from_name_and_tag_to_message
 
 
-class AgentMessage:
+class AgentMessageInterface:
     """
     Structured format for agent messages.
     Should define what agents can see of each other messages.
