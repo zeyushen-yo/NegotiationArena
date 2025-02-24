@@ -70,8 +70,8 @@ if __name__ == "__main__":
 
     print("agent1 utility: ", sum(agent1_utility) / 100)
     print("agent2 utility: ", sum(agent2_utility) / 100)
-    plt.hist(data, bins=1, edgecolor='black')
-    plt.title('Histogram of negotiation outcome.')
+    plt.hist(agent1_utility, bins=1, edgecolor='black')
+    plt.title('a1_utility')
     plt.xlabel('Value')
     plt.ylabel('Frequency')
 
