@@ -3,10 +3,10 @@ from negotiationarena.constants import *
 from negotiationarena.utils import *
 from games.trading_game.prompt import trading_prompt
 from negotiationarena.parser import ExchangeGameDefaultParser
-from negotiationarena.agent_message import AgentMessageInterface
+from negotiationarena.agent_message import AgentMessage
 
 
-class TradingAgentMessage(AgentMessageInterface):
+class TradingAgentMessage(AgentMessage):
     """
     Structured format for agent messages.
     Should define what agents can see of each other messages.

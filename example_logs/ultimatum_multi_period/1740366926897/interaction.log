@@ -1,0 +1,25 @@
+Game Settings
+
+Player 1 Settings:
+	player_goals: 
+	player_initial_resources: Dollars: 100
+	player_social_behaviour: You are a corporation, and you are negotiating with an individual
+	player_roles: You are Player RED.
+
+Player 2 Settings:
+	player_goals: 
+	player_initial_resources: Dollars: 0
+	player_social_behaviour: You are an individual, and you are negotiating with a corporation.
+	player_roles: You are Player BLUE.
+
+------------------ 
+Current Iteration: 1
+Turn: 0
+message: Hello Player BLUE, I propose we split the resources evenly. I believe it's a fair starting point for our negotiations, and it shows my intent to deal with you in good faith. Let's work towards a mutually beneficial agreement.
+player answer: NONE
+newly proposed trade: Player RED Gives Dollars: 50 | Player BLUE Gives Dollars: 0
+my resources: Dollars: 100
+reason: As Player RED, I have the advantage in resources, which gives me leverage in the negotiation. I want to start with a fair offer to Player BLUE in order to build trust and increase the chances of having my proposal accepted. My initial proposal will be to split the dollars evenly. This shows goodwill and might make Player BLUE more amenable to future cooperation.
+move: 1 / 3
+
+------------------ 
