@@ -121,3 +121,28 @@ class SellerGoal(Goal):
             "_type": "seller_goal",
             "_value": self.cost_of_production.json(),
         }
+
+
+class NewSellerGoal(Goal):
+    def __init__(self, want_to_sell_for: Valuation):
+        super().__init__()
+        self.want_to_sell_for = want_to_sell_for
+        self.goal = f"Sell resources for <{MONEY_TOKEN}>. You want to sell it for {self.want_to_sell_for}"
+
+    def __repr__(self):
+        return self.goal
+
+    def get_valuation(self):
+        return self.want_to_sell_for
+
+    def __str__(self):
+        return self.goal
+
+    def to_prompt(self):
+        return self.goal
+
+    def json(self):
+        return {
+            "_type": "new_seller_goal",
+            "_value": self.want_to_sell_for.json(),
+        }

@@ -38,8 +38,8 @@ if __name__ == "__main__":
                     Resources({"Dollars": 100}),
                     Resources({"Dollars": 0}),
                 ],
-                player_social_behaviour=["You are a corporation, and you are negotiating with an individual", 
-                                        "You are an individual, and you are negotiating with a corporation."],
+                player_social_behaviour=["You are an individual, and you are negotiating with a corporation.",
+                                        "You are a corporation, and you are negotiating with an individual"],
                 player_roles=[
                     f"You are {AGENT_ONE}.",
                     f"You are {AGENT_TWO}.",
@@ -48,8 +48,8 @@ if __name__ == "__main__":
             )
 
             c.run()
-            agent1_utility.append(c.game_state[-1]["summary"]["player_outcome"][0])
-            agent2_utility.append(c.game_state[-1]["summary"]["player_outcome"][1])
+            agent1_utility.append(c.game_state[-1]["summary"]["player_outcome"][0].resource_dict['Dollars'])
+            agent2_utility.append(c.game_state[-1]["summary"]["player_outcome"][1].resource_dict['Dollars'])
             cnt += 1
         except Exception as e:
             exception_type = type(e).__name__
@@ -68,7 +68,4 @@ if __name__ == "__main__":
     plt.xlabel('Value')
     plt.ylabel('Frequency')
 
-    output_dir = 'figures/ultimatum'
-    os.makedirs(output_dir, exist_ok=True) 
-    output_file = os.path.join(output_dir, 'agent1_corporation_agent2_individual.png')
-    plt.savefig(output_file)
+    plt.show()

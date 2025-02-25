@@ -62,12 +62,8 @@ if __name__ == "__main__":
 
     print("seller utility: ", sum(seller_utility) / 100)
     print("buyer utility: ", sum(buyer_utility) / 100)
-    plt.hist(data, bins=1, edgecolor='black')
-    plt.title('Histogram of negotiation outcome.')
+    plt.hist(seller_utility, bins=1, edgecolor='black')
+    plt.title('a1_utility.')
     plt.xlabel('Value')
     plt.ylabel('Frequency')
-
-    output_dir = 'figures/buy_and_sell'
-    os.makedirs(output_dir, exist_ok=True) 
-    output_file = os.path.join(output_dir, 'agent1_individual_agent2_corporation.png')
-    plt.savefig(output_file)
+    plt.show()
