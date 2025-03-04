@@ -96,6 +96,32 @@ class BuyerGoal(Goal):
             "_type": "buyer_goal",
             "_value": self.willingness_to_pay.json(),
         }
+    
+
+class VerySpecificBuyerGoal(Goal):
+    def __init__(self, willingness_to_pay: Valuation, ideal_price: Valuation):
+        super().__init__()
+        self.willingness_to_pay = willingness_to_pay
+        self.ideal_price = ideal_price
+        self.goal = f"Buy resources with <{MONEY_TOKEN}>. Ideally, you want to pay {ideal_price} for the resources. Given the negotiation doesn't break, you are willing to pay at most {willingness_to_pay} for the resources."
+
+    def __repr__(self):
+        return self.goal
+
+    def get_valuation(self):
+        return self.willingness_to_pay
+
+    def __str__(self):
+        return self.goal
+
+    def to_prompt(self):
+        return self.goal
+
+    def json(self):
+        return {
+            "_type": "buyer_goal",
+            "_value": self.willingness_to_pay.json(),
+        }
 
 
 class SellerGoal(Goal):
@@ -145,4 +171,31 @@ class NewSellerGoal(Goal):
         return {
             "_type": "new_seller_goal",
             "_value": self.want_to_sell_for.json(),
+        }
+    
+
+class VerySpecificSellerGoal(Goal):
+    def __init__(self, cost_of_production: Valuation, ideal_price : Valuation, lowest_price : Valuation):
+        super().__init__()
+        self.cost_of_production = cost_of_production
+        self.ideal_price = ideal_price
+        self.lowest_price = lowest_price
+        self.goal = f"Sell resources for <{MONEY_TOKEN}>. It costed {self.cost_of_production} to produce the resources. Ideally, you want to sell the product for {self.ideal_price}. Given the negotiation doesn't break, your lowest acceptable price is {self.lowest_price}."
+
+    def __repr__(self):
+        return self.goal
+
+    def get_valuation(self):
+        return self.cost_of_production
+
+    def __str__(self):
+        return self.goal
+
+    def to_prompt(self):
+        return self.goal
+
+    def json(self):
+        return {
+            "_type": "seller_goal",
+            "_value": self.cost_of_production.json(),
         }
